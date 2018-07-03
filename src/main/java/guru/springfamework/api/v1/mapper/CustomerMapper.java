@@ -6,7 +6,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 /**
- * 23r423432
+ * Created by jt on 9/27/17.
  */
 @Mapper
 public interface CustomerMapper {
@@ -14,4 +14,7 @@ public interface CustomerMapper {
     CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
 
     CustomerDTO customerToCustomerDTO(Customer customer);
+
+    Customer customerDtoToCustomer(CustomerDTO customerDTO);
+
 }

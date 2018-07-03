@@ -7,11 +7,12 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * Created by jt on 9/27/17.
+ * Created by jt on 10/8/17.
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class CustomerListDTO {
-    List<CustomerDTO> customers;
+@NoArgsConstructor
+public class VendorListDTO {
+
+    List<VendorDTO> vendors;
 }
