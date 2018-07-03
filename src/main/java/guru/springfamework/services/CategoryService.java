@@ -5,7 +5,7 @@ import guru.springfamework.api.v1.model.CategoryDTO;
 import java.util.List;
 
 /**
- * 123213
+ * Created by jt on 9/26/17.
  */
 public interface CategoryService {
 

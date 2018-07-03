@@ -5,17 +5,16 @@ import guru.springfamework.repositories.CategoryRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-
 /**
- * 23423
+ * Created by jt on 9/24/17.
  */
 @Component
-public class Bootstrap implements CommandLineRunner {
+public class Bootstrap implements CommandLineRunner{
 
     private CategoryRepository categoryRepository;
 
-    public Bootstrap(CategoryRepository categoryRepository) {
-        this.categoryRepository = categoryRepository;
+    public Bootstrap(CategoryRepository categoryRespository) {
+        this.categoryRepository = categoryRespository;
     }
 
     @Override
@@ -33,6 +32,7 @@ public class Bootstrap implements CommandLineRunner {
         exotic.setName("Exotic");
 
         Category nuts = new Category();
+
         nuts.setName("nuts");
 
         categoryRepository.save(fruits);
@@ -42,6 +42,7 @@ public class Bootstrap implements CommandLineRunner {
         categoryRepository.save(nuts);
 
         System.out.println("Data Loaded = " + categoryRepository.count() );
+
 
     }
 }

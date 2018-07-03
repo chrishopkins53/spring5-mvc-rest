@@ -22,7 +22,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+<<<<<<< HEAD
         <org.mapstruct.version>1.2.0.CR2</org.mapstruct.version>
+=======
+        <org.mapstruct.version>1.2.0.Final</org.mapstruct.version>
+        <m2e.apt.activation>jdt_apt</m2e.apt.activation>
+>>>>>>> category-controller
     </properties>
 
     <dependencies>
@@ -55,6 +60,16 @@
             <version>${org.mapstruct.version}</version>
         </dependency>
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${org.mapstruct.version}</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+>>>>>>> category-controller
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -100,7 +115,11 @@
                     </annotationProcessorPaths>
                     <compilerArgs>
                         <compilerArg>
+<<<<<<< HEAD
                             -Amapstruct.defaultComponentModel=spring
+=======
+                               -Amapstruct.defaultComponentModel=spring
+>>>>>>> category-controller
                         </compilerArg>
                     </compilerArgs>
                 </configuration>

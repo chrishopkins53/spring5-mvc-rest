@@ -12,13 +12,15 @@ import org.mockito.MockitoAnnotations;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 public class CategoryServiceTest {
 
-    public static final Long ID = 2l;
+
+    public static final Long ID = 2L;
     public static final String NAME = "Jimmy";
     CategoryService categoryService;
 
