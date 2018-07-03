@@ -115,11 +115,7 @@
                     </annotationProcessorPaths>
                     <compilerArgs>
                         <compilerArg>
-<<<<<<< HEAD
-                            -Amapstruct.defaultComponentModel=spring
-=======
                                -Amapstruct.defaultComponentModel=spring
->>>>>>> category-controller
                         </compilerArg>
                     </compilerArgs>
                 </configuration>

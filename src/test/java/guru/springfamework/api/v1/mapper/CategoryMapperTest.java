@@ -31,5 +31,5 @@ public class CategoryMapperTest {
         assertEquals(Long.valueOf(ID), categoryDTO.getId());
         assertEquals(NAME, categoryDTO.getName());
     }
-    
+
 }
