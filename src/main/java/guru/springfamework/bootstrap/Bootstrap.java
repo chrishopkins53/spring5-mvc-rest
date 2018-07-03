@@ -1,9 +1,12 @@
 package guru.springfamework.bootstrap;
 
 import guru.springfamework.domain.Category;
+import guru.springfamework.domain.Customer;
 import guru.springfamework.repositories.CategoryRepository;
+import guru.springfamework.repositories.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import sun.security.krb5.internal.ccache.CredentialsCache;
 
 /**
  * Created by jt on 9/24/17.
@@ -11,14 +14,22 @@ import org.springframework.stereotype.Component;
 @Component
 public class Bootstrap implements CommandLineRunner{
 
-    private CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
+    private final CustomerRepository customerRepository;
 
-    public Bootstrap(CategoryRepository categoryRespository) {
+    public Bootstrap(CategoryRepository categoryRespository, CustomerRepository customerRepository) {
         this.categoryRepository = categoryRespository;
+        this.customerRepository = customerRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        loadCategories();
+        loadCustomers();
+    }
+
+    private void loadCategories() {
         Category fruits = new Category();
         fruits.setName("Fruits");
 
@@ -42,7 +53,23 @@ public class Bootstrap implements CommandLineRunner{
         categoryRepository.save(nuts);
 
         System.out.println("Data Loaded = " + categoryRepository.count() );
+    }
 
+    private void loadCustomers() {
+        //given
+        Customer customer1 = new Customer();
+        customer1.setId(1L);
+        customer1.setFirstname("Michale");
+        customer1.setLastname("Weston");
+        customerRepository.save(customer1);
 
+        Customer customer2 = new Customer();
+        customer2.setId(2L);
+        customer2.setFirstname("Sam");
+        customer2.setLastname("Axe");
+
+        customerRepository.save(customer2);
+
+        System.out.println("Customers Loaded: " + customerRepository.count());
     }
 }
